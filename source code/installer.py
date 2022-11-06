@@ -3,7 +3,7 @@
 import requests
 import os 
 
-def installer(link1, link2, link3):
+def installer(link1, link2, link3, link4):
     
     outroURL = "https://github.com/Hamy-os/computer-outro/raw/main/outro.mp3"
 
@@ -43,6 +43,13 @@ def installer(link1, link2, link3):
         file.write(response.content)
 
     print("Success!")
+    
+    print("Downloading bsod.bat...")
+
+    response = requests.get(link4)
+
+    with open("bsod.bat", "wb")as file:
+        file.write(response.content)
 
     print("Installation complete.")
         
