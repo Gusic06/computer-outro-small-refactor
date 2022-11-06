@@ -1,4 +1,4 @@
-#pyinstaller initialiser
+#PyInstaller initialiser
 import PyInstaller.__main__
 
 PyInstaller.__main__.run([
