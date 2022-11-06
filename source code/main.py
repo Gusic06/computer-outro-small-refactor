@@ -8,8 +8,9 @@ import os
 
 ###################################################################
 
-installer("https://github.com/Gusic06/computer-outro-small-refactor-/blob/main/source%20code/bsod.py", 
-    "https://github.com/Gusic06/computer-outro-small-refactor-/blob/main/source%20code/fakebsod.py", 
+installer("https://github.com/Gusic06/computer-outro-small-refactor-/blob/main/source%20code/realBsod.py", 
+    "https://github.com/Gusic06/computer-outro-small-refactor-/blob/main/source%20code/fakebsod.py",
+    "https://github.com/Gusic06/computer-outro-small-refactor/blob/main/bsod.bat",
     "https://github.com/Gusic06/computer-outro-small-refactor-/blob/main/source%20code/shutdown.py")
 
 ###################################################################
