@@ -1,5 +1,5 @@
-from bsod import bsod
-from fakebsod import fakeBsod
+from realBsod import bsod
+from fakeBsod import fakeBsod
 from installer import installer
 from shutdown import shutdown
 from divider import divider
