@@ -3,7 +3,7 @@
 import requests
 import os 
 
-def installer():
+def installer(link1, link2, link3):
     
     outroURL = "https://github.com/Hamy-os/computer-outro/raw/main/outro.mp3"
 
@@ -12,10 +12,6 @@ def installer():
     response = requests.get(outroURL)
     open("outro.mp3", "wb").write(response.content)
     print("Download complete.")
-    
-    choice1URL = "https://github.com/Hamy-os/computer-outro/raw/main/fakebsod.exe"
-    choice2URL = "https://github.com/Hamy-os/computer-outro/raw/main/bsod.exe"
-    choice3URL = "https://github.com/Hamy-os/computer-outro/raw/main/shutdown.exe"
 
     print("Please pick one.")
     choice = input("""There are 3 options: 
@@ -27,7 +23,7 @@ Option 3: Shutdown (shutdown.exe)""")
         
         print("Downloading Fake bsod...")
         
-        response = requests.get("https://raw.githubusercontent.com/Hamy-os/computer-outro/fake-bsod/bsod.bat")
+        response = requests.get(link1)
         
         with open("bsod.bat", "wb")as file:
             file.write(response.content)
@@ -47,7 +43,7 @@ Option 3: Shutdown (shutdown.exe)""")
         
         print("Downloading Real bsod...")
         
-        response = requests.get(choice2URL)
+        response = requests.get(link2)
         
         with open("bsod.exe", "wb")as file:
             file.write(response.content)
@@ -69,7 +65,7 @@ Option 3: Shutdown (shutdown.exe)""")
         
         print("Downloading Shutdown.exe...")
         
-        response = requests.get(choice3URL)
+        response = requests.get(link3)
         
         with open("shutdown.exe", "wb")as file:
             file.write(response.content)
