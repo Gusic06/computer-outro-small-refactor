@@ -24,13 +24,15 @@ def shutdown():
             time.sleep(1.25)
         else:
             print(f"Shutting down in: {loopTime} Seconds")
-            time.sleep(1)
+            time.sleep(0.75)
 
     # Shutdown
     
     try: #Trying this way first and if that doesn't work the except codeblock is executed
         subprocess.call(["shutdown", "/s", "/t", "1"])
     except:
+        print("""subprocess.call failed,
+trying os.system...""")
         os.system("shutdown /s /t 1")
     
 if __name__ == "__main__":
