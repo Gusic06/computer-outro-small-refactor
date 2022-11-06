@@ -24,8 +24,12 @@ def fakeBsod():
             print(f"Shutting down in: {loopTime} Seconds")
             time.sleep(0.75)
 
-    bat_file_path = str(f"{os.path.dirname(__file__)}/bsod.bat")
-    subprocess.call([bat_file_path])
+    batFilePath = str(f"{os.path.dirname(__file__)}\\bsod.bat")
+    
+    try:
+        subprocess.call([batFilePath])
+    except:
+        os.system(batFilePath)
 
 if __name__ == "__main__":
     fakeBsod()
