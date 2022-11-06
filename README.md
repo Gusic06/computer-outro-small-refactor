@@ -1,6 +1,6 @@
 # HOW TO RUN
 
-Step 1: Download the ZIP from https://github.com/Hamy-os/computer-outro
+Step 1: Download the ZIP from https://github.com/Gusic06/computer-outro-small-refactor-
 ![enter image description here](https://hamza.file.glass/hKfVlOuZU4.gif)
 Step 2: Unzip it
 ![enter image description here](https://hamza.file.glass/lloYDBDqvI.gif)
