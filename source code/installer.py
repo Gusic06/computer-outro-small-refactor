@@ -17,7 +17,6 @@ def installer(link1, link2, link3, link4):
         
     print("Download complete.")
 
-        
     print("Downloading bsod.bat...")
 
     response = requests.get(link1)
