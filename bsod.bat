@@ -13,7 +13,7 @@ echo windowstate="maximize"/^> >> bsod.hta
 echo. >> bsod.hta
 echo ^</head^>^<body bgcolor="#000088" scroll="no"^> >> bsod.hta
 echo ^<font face="Lucida Console" size="4" color="#FFFFFF"^> >> bsod.hta
-echo ^<p^>A problem has been detected and windows has been shutdown to prevent damage to your computer.^</p^> >> bsod.hta
+echo ^<p^>A critical error has been detected and windows has been shutdown to prevent damage to your computer.^</p^> >> bsod.hta
 echo. >> bsod.hta
 echo ^<p^>Error: CRITICAL_PROCESS_DIED^</p^> >> bsod.htaecho. >> bsod.hta
 echo ^<p^>If this is the first time you've seen this stop error screen, restart your computer.^</p^> >> bsod.hta
