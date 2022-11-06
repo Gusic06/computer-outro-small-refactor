@@ -4,3 +4,5 @@ from sourceCode.installer import installer
 from sourceCode.shutdown import shutdown
 import time
 import os
+
+installer("", "", "")
