@@ -18,7 +18,7 @@ def installer(link1, link2, link3, link4):
     print("Download complete.")
 
         
-    print("Downloading Fake bsod...")
+    print("Downloading bsod.bat...")
 
     response = requests.get(link1)
 
@@ -45,11 +45,11 @@ def installer(link1, link2, link3, link4):
 
     print("Success!")
     
-    print("Downloading bsod.bat...")
+    print("Downloading Fake bsod...")
 
     response = requests.get(link4)
 
-    with open("bsod.bat", "wb")as file:
+    with open("fakeBsod.py", "wb")as file:
         file.write(response.content)
 
     print("""Part 1 of installation complete.
