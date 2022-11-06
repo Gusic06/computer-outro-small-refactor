@@ -1,7 +1,7 @@
-from source code.bsod import bsod
-from source code.fakebsod import fakeBsod
-from source code.installer import installer
-from source code.shutdown import shutdown
+from bsod import bsod
+from fakebsod import fakeBsod
+from installer import installer
+from shutdown import shutdown
 import time
 import os
 
