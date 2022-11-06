@@ -18,7 +18,7 @@ def shutdown():
 
     time.sleep(0.1)
     
-    for loopTime in range(10)[::-1]:
+    for loopTime in range(10)[::-1]: #[::-1] <- Reverses the for loop countdown | A normal loop countdown would be "1, 2, 3, 4" but a reversed one would be "4, 3, 2, 1"
         if loopTime == 0:
             print("Shutting down now!")
             time.sleep(1.25)
