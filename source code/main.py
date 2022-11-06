@@ -11,10 +11,10 @@ import os
 #Note that this file is meant to run as an executable as the main installer of sorts
 ###################################################################
 
-installer("https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py", 
-    "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py",
-    "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/bsod.bat",
-    "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py")
+installer("https://github.com/Gusic06/computer-outro-small-refactor/raw/main/bsod.bat",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py")
 
 ###################################################################
 
