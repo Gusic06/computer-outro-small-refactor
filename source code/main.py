@@ -12,9 +12,9 @@ import os
 ###################################################################
 
 installer("https://github.com/Gusic06/computer-outro-small-refactor/raw/main/bsod.bat",
-         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py",
-         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py",
-         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py")
+     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py",
+     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py",
+     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py")
 
 ###################################################################
 
@@ -25,9 +25,11 @@ PyInstaller.__main__.run([
     "--onefile"
 ])"""
 # ^ This is the code that we are executing here
-
-exec(fakeBsodInit) #Normally using exec() is a pretty terrible idea but here it should be fine as all we are doing is making fakeBsod.py into an executable
-
+try:
+    exec(fakeBsodInit) #Normally using exec() is a pretty terrible idea but here it should be fine as all we are doing is making fakeBsod.py into an executable
+except:
+    raise Exception("An error occured, maybe try reinstalling?")
+    
 ###################################################################
 divider()
 
@@ -38,8 +40,10 @@ PyInstaller.__main__.run([
     "--onefile"
 ])
 """
-    
-exec(shutdownInit)
+try:
+    exec(shutdownInit)
+except:
+    raise Exception("An error occured, maybe try reinstalling?")
 
 ###################################################################
 divider()
@@ -51,8 +55,10 @@ PyInstaller.__main__.run([
     "--onefile"
 ])
 """
-
-exec(realBsodInit)
+try:
+    exec(realBsodInit)
+except:
+    raise Exception("An error occured, maybe try reinstalling?")
 
 ###################################################################
 divider()
@@ -61,9 +67,9 @@ print("Download completed!")
 
 for loopTime in range(6)[::-1]: #Counts down from 5 not 6, don't ask me why because I don't know
     if loopTime == 0:
-        time.sleep(0.75)
+        time.sleep(1)
         print("Exiting program.")
         sys.exit()
     else:
-        time.sleep(0.75)
+        time.sleep(1)
         print(f"Exiting program in {loopTime}.")
