@@ -24,6 +24,7 @@ PyInstaller.__main__.run([
 exec(fakeBsodInit)
 
 ###################################################################
+divider()
 
 shutdownInit = """import PyInstaller.__main__
     
