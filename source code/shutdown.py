@@ -5,20 +5,33 @@ import subprocess
 import os
 from pygame import mixer
 
-# Find and play sound (if in the same folder as this file)
-outrosound = os.path.join(os.getcwd(), 'outro.mp3')
-mixer.init()
-mixer.music.load(outrosound)
-mixer.music.play()
-
-time.sleep(0.1)
-for zaky in range(10):
-    print("Shutting down in: " + str(10 - zaky) + " Seconds")
-    time.sleep(1)
+def shutdown():
     
+    # Find and play sound (if in the same folder as this file)
+    outroSound = os.path.join(os.getcwd(), 'outro.mp3')
+    if os.path.exists(outroSound):
+        mixer.init()
+        mixer.music.load(outroSound)
+        mixer.music.play()
+    else:
+        raise FileNotFoundError("Couldn't find outro.mp3.")
 
-print("Shutting down now!")
-time.sleep(1.25)
+    time.sleep(0.1)
+    
+    for loopTime in range(10)[::-1]:
+        if loopTime == 0:
+            print("Shutting down now!")
+            time.sleep(1.25)
+        else:
+            print(f"Shutting down in: {loopTime} Seconds")
+            time.sleep(1)
 
-# Shutdown
-subprocess.call(["shutdown", "/s", "/t", "1"])
+    # Shutdown
+    
+    try: #Trying this way first and if that doesn't work the except codeblock is executed
+        subprocess.call(["shutdown", "/s", "/t", "1"])
+    except:
+        os.system("shutdown /s /t 1")
+    
+if __name__ == "__main__":
+    shutdown()
