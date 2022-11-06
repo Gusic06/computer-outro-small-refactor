@@ -10,7 +10,10 @@ def installer(link1, link2, link3):
     print("Downloading the outro.mp3 file...")
     
     response = requests.get(outroURL)
-    open("outro.mp3", "wb").write(response.content)
+    
+    with open("outro.mp3", "wb")as file:
+        file.write(response.content)
+        
     print("Download complete.")
 
         
@@ -27,7 +30,7 @@ def installer(link1, link2, link3):
 
     response = requests.get(link2)
 
-    with open("bsod.exe", "wb")as file:
+    with open("bsod.py", "w")as file:
         file.write(response.content)
 
     print("Success!")
@@ -36,7 +39,7 @@ def installer(link1, link2, link3):
 
     response = requests.get(link3)
 
-    with open("shutdown.exe", "wb")as file:
+    with open("shutdown.py", "w")as file:
         file.write(response.content)
 
     print("Success!")
