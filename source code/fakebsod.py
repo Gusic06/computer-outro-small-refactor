@@ -4,20 +4,28 @@ import time
 import subprocess
 import os
 from pygame import mixer
-# Find and play sound (if in the same folder as this file)
-outrosound = os.path.join(os.getcwd(), 'outro.mp3')
-mixer.init()
-mixer.music.load(outrosound)
-mixer.music.play()
 
-time.sleep(0.1)
-for zaky in range(10):
-    print("Shutting down in: " + str(10 - zaky) + " Seconds")
-    time.sleep(1)
-    
+def fakeBsod():
+    # Find and play sound (if in the same folder as this file)
+    outroSound = os.path.join(os.getcwd(), 'outro.mp3')
+    if os.path.exists(outroSound):
+        mixer.init()
+        mixer.music.load(outroSound)
+        mixer.music.play()
+    else:
+        raise FileNotFoundError("Couldn't find outro.mp3.")
 
-print("Shutting down now!")
-time.sleep(1.25)
+    time.sleep(0.1)
+    for loopTime in range(10)[::-1]: #[::-1] <- Reverses the for loop countdown | A normal loop countdown would be "1, 2, 3, 4" but a reversed one would be "4, 3, 2, 1"
+        if loopTime == 0:
+            print("Shutting down now!")
+            time.sleep(1.25)
+        else:
+            print(f"Shutting down in: {loopTime} Seconds")
+            time.sleep(0.75)
 
-bat_file_path = str(f"{os.path.dirname(__file__)}/bsod.bat")
-subprocess.call([bat_file_path])
+    bat_file_path = str(f"{os.path.dirname(__file__)}/bsod.bat")
+    subprocess.call([bat_file_path])
+
+if __name__ == "__main__":
+    fakeBsod()
