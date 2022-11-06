@@ -29,6 +29,8 @@ def installer(link1, link2, link3, link4):
     print("Downloading Real bsod...")
 
     response = requests.get(link2)
+    
+    response = response.decode("utf-8")
 
     with open("bsod.py", "w")as file:
         file.write(response.content)
