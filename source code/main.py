@@ -10,11 +10,16 @@ import os
 
 #Note that this file is meant to run as an executable as the main installer of sorts
 ###################################################################
+loop = True
 
-installer("https://github.com/Gusic06/computer-outro-small-refactor/raw/main/bsod.bat",
-     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py",
-     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py",
-     "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py")
+while loop == True: #We need this loop because otherwise it does some wacky ass shit that is driving me insane
+    
+    installer("https://github.com/Gusic06/computer-outro-small-refactor/raw/main/bsod.bat",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/realBsod.py",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/shutdown.py",
+         "https://github.com/Gusic06/computer-outro-small-refactor/raw/main/source%20code/fakeBsod.py")
+    
+    loop = False
 
 ###################################################################
 
